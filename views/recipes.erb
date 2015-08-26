@@ -1,0 +1,15 @@
+<h1>Recipes</h1>
+<ul>
+    <% @recipes.each do |recipe| %>
+    <li><a href="/recipes/<%= recipe.id %>"><%= recipe.name %></a></li>
+    <% end %>
+</ul>
+
+
+<form id="form_id" action="/recipes" method="post">
+    <label for="name">Recipe Name:</label>
+    <input type="text" name="name" value="">
+    <button name="submit">Create a new recipe</button>
+
+
+</form>

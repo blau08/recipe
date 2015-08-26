@@ -1,0 +1,19 @@
+<h1><%= @recipe.name() %></h1>
+<h2>Ingredients:</h2>
+<p>
+  <% @recipe.ingredients().each() do |ingredient| %>
+    <li><%= ingredient.name() %></li>
+    <% end %>
+</p>
+<h2>instruction:</h2>
+<ol>
+  <li><%= @recipe.instructions %></li>
+
+</ol>
+<form id="form_id" action="/recipes/<%= @recipe.id %>" method="post">
+  <label for="ingredients">ingredients: </label><br>
+  <textarea name="ingredients" rows="8" cols="40"></textarea><br>
+  <label for="instruction">instruction:</label><br>
+  <textarea name="instruction" rows="8" cols="40"></textarea><br>
+  <button name="submit">Submit</button>
+</form>
